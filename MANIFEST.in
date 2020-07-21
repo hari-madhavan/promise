@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include promise *.css
+recursive-include promise *.csv
+recursive-include promise *.html
+recursive-include promise *.ico
+recursive-include promise *.js
+recursive-include promise *.json
+recursive-include promise *.md
+recursive-include promise *.png
+recursive-include promise *.py
+recursive-include promise *.svg
+recursive-include promise *.txt
+recursive-exclude promise *.pyc
