@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "autoname": "format:{parent_delivery_team}-{team_name}",
+ "creation": "2020-07-26 11:59:08.559951",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "team_name",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_delivery_team",
+  "team_logo"
+ ],
+ "fields": [
+  {
+   "fieldname": "team_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Team Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Old Parent",
+   "options": "Delivery Team"
+  },
+  {
+   "fieldname": "parent_delivery_team",
+   "fieldtype": "Link",
+   "label": "Parent Delivery Team",
+   "options": "Delivery Team"
+  },
+  {
+   "fieldname": "team_logo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Team Logo"
+  }
+ ],
+ "image_field": "team_logo",
+ "is_tree": 1,
+ "links": [],
+ "modified": "2020-07-26 11:59:08.559951",
+ "modified_by": "Administrator",
+ "module": "ProMISe",
+ "name": "Team",
+ "nsm_parent_field": "parent_delivery_team",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "team_name",
+ "sort_field": "team_name",
+ "sort_order": "ASC",
+ "title_field": "team_name",
+ "track_changes": 1
+}
