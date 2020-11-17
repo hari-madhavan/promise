@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "autoname": "format:{from_currency}-{to_currency}-{date}",
+ "creation": "2020-11-17 16:15:14.567313",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "from_currency",
+  "to_currency",
+  "exchange_rate",
+  "source"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "exchange_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Exchange Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "label": "Source"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2020-11-17 16:18:10.114128",
+ "modified_by": "Administrator",
+ "module": "ProMISe",
+ "name": "Currency Exchange",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
