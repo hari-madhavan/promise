@@ -12,7 +12,10 @@
   "full_name",
   "date_of_joining",
   "designation",
-  "employment_type"
+  "employment_type",
+  "exit_date",
+  "salary",
+  "assignment"
  ],
  "fields": [
   {
@@ -26,7 +29,7 @@
    "fieldname": "date_of_joining",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Date of Joining",
+   "label": "Joining Date",
    "reqd": 1
   },
   {
@@ -50,11 +53,29 @@
    "fieldtype": "Select",
    "label": "Employment Type",
    "options": "Employee\nIntern\nConsultant"
+  },
+  {
+   "fieldname": "exit_date",
+   "fieldtype": "Date",
+   "label": "Exit Date"
+  },
+  {
+   "columns": 6,
+   "fieldname": "salary",
+   "fieldtype": "Table",
+   "label": "Salary",
+   "options": "Salary"
+  },
+  {
+   "fieldname": "assignment",
+   "fieldtype": "Table",
+   "label": "Assignment",
+   "options": "Assignment"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2020-11-17 17:18:02.119974",
+ "modified": "2020-11-18 10:37:27.027446",
  "modified_by": "Administrator",
  "module": "ProMISe",
  "name": "MIS Employee",
@@ -73,6 +94,7 @@
    "write": 1
   }
  ],
+ "restrict_to_domain": "Management Information",
  "search_fields": "full_name",
  "sort_field": "modified",
  "sort_order": "DESC",
