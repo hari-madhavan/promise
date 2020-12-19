@@ -1,4 +1,3 @@
-ProMISe
 masters
 transactions
 analytics
