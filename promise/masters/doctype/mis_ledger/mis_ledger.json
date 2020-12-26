@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{ledger_code}-{ledger_name}",
+ "creation": "2020-12-26 08:32:39.998418",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ledger_code",
+  "ledger_name",
+  "ledger_type",
+  "is_direct",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_mis_ledger"
+ ],
+ "fields": [
+  {
+   "fieldname": "ledger_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ledger Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ledger_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ledger Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ledger_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Ledger Type",
+   "options": "Income\nExpense",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_direct",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Direct",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Old Parent",
+   "options": "MIS Ledger"
+  },
+  {
+   "fieldname": "parent_mis_ledger",
+   "fieldtype": "Link",
+   "label": "Parent MIS Ledger",
+   "options": "MIS Ledger"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2020-12-26 09:20:54.327966",
+ "modified_by": "Administrator",
+ "module": "Masters",
+ "name": "MIS Ledger",
+ "name_case": "UPPER CASE",
+ "nsm_parent_field": "parent_mis_ledger",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "ledger_name",
+ "track_changes": 1
+}

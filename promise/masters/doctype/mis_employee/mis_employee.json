@@ -1,83 +1,105 @@
 {
  "actions": [],
  "allow_import": 1,
- "allow_rename": 1,
- "autoname": "field:full_name",
- "creation": "2020-11-17 16:50:26.524221",
+ "autoname": "field:employee_code",
+ "creation": "2020-12-25 21:16:02.321851",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "id",
-  "full_name",
-  "date_of_joining",
-  "designation",
+  "employee_code",
+  "employee_name",
+  "date_of_birth",
+  "section_break_4",
   "employment_type",
-  "exit_date",
-  "salary",
-  "assignment"
+  "date_of_joining",
+  "email",
+  "current_designation",
+  "current_status",
+  "date_of_exit",
+  "current_manager",
+  "function_type"
  ],
  "fields": [
-  {
-   "fieldname": "id",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Id",
-   "reqd": 1
-  },
   {
    "fieldname": "date_of_joining",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Joining Date",
+   "label": "Date of Joining",
    "reqd": 1
-  },
-  {
-   "fieldname": "designation",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Designation",
-   "options": "Intern\nAssociate Functional Consultant\nAssociate Technical Consultant\nFunctional Consultant\nTechnical Consultant\nSenior Functional Consultant\nSenior Technical Consultant\nLead Functional Consultant\nLead Technical Consultant\nLead Techno Functional Consultant\nProject Manager\nDelivery Manager\nSales Manager\nAdmin and Finance Manager\nHR Manager\nSenior Systems Administrator\nIT Admin & Support Engineer\nManaging Director\nSales Consultant",
-   "reqd": 1
-  },
-  {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Full Name",
-   "reqd": 1,
-   "unique": 1
   },
   {
    "fieldname": "employment_type",
    "fieldtype": "Select",
    "label": "Employment Type",
-   "options": "Employee\nIntern\nConsultant"
+   "options": "Contract\nEmployee\nIntern",
+   "reqd": 1
   },
   {
-   "fieldname": "exit_date",
+   "allow_in_quick_entry": 1,
+   "fieldname": "employee_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
    "fieldtype": "Date",
-   "label": "Exit Date"
+   "label": "Date of Birth"
   },
   {
-   "columns": 6,
-   "fieldname": "salary",
-   "fieldtype": "Table",
-   "label": "Salary",
-   "options": "Salary"
+   "fieldname": "current_designation",
+   "fieldtype": "Data",
+   "label": "Current Designation"
   },
   {
-   "fieldname": "assignment",
-   "fieldtype": "Table",
-   "label": "Assignment",
-   "options": "Assignment"
+   "fieldname": "current_status",
+   "fieldtype": "Select",
+   "label": "Current Status",
+   "options": "Recruited\nProbation\nPermanent\nExited\nOn Long Leave\nNA",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "current_manager",
+   "fieldtype": "Link",
+   "label": "Current Manager",
+   "options": "MIS Employee"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_exit",
+   "fieldtype": "Date",
+   "label": "Date of Exit"
+  },
+  {
+   "fieldname": "function_type",
+   "fieldtype": "Select",
+   "label": "Function Type",
+   "options": "Line\nStaff"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2020-11-18 10:37:27.027446",
+ "modified": "2020-12-25 23:30:52.049512",
  "modified_by": "Administrator",
- "module": "ProMISe",
+ "module": "Masters",
  "name": "MIS Employee",
  "owner": "Administrator",
  "permissions": [
@@ -86,18 +108,19 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "set_user_permissions": 1,
    "share": 1,
    "write": 1
   }
  ],
- "restrict_to_domain": "Management Information",
- "search_fields": "full_name",
+ "quick_entry": 1,
+ "restrict_to_domain": "MIS",
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "full_name",
  "track_changes": 1
 }
